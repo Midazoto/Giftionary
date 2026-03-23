@@ -1,0 +1,17 @@
+services:
+  pocketbase:
+    build: ./backend
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./backend/pb_data:/pb/pb_data
+      - ./backend/pb_migrations:/pb/pb_migrations
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - PUBLIC_POCKETBASE_URL=http://pocketbase:8090 # URL interne au réseau Docker
+    depends_on:
+      - pocketbase

@@ -1,0 +1,11 @@
+# PocketBase
+backend/pb_data/
+
+# SvelteKit
+frontend/.svelte-kit/
+frontend/build/
+frontend/node_modules/
+
+# OS/Env
+.env
+.DS_Store
