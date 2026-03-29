@@ -24,7 +24,7 @@
     function getLocaleFlag(locale: string) {
         return `/flags/${locale}.svg`;
     }
-    
+
     function onFlagError(event: Event) {
         const img = event.currentTarget as HTMLImageElement | null;
         if (!img) return;
@@ -63,13 +63,14 @@
 
 <svelte:head>
     <link rel="icon" href={favicon} />
+    <title>Giftionary</title>
 </svelte:head>
 
 <svelte:window onclick={onWindowClick} onkeydown={onWindowKeydown} />
 
 <header class="flex items-center justify-between p-4 bg-white border-b shadow-sm">
     <nav class="flex gap-4">
-        <a href={localizeHref('/')} class="font-bold text-blue-600">Home</a>
+        <a href={localizeHref('/')} class="font-bold text-blue-600">{m.home_button()}</a>
     </nav>
 
     <div class="flex items-center gap-6">
@@ -137,12 +138,12 @@
                     onclick={logout}
                     class="text-xs bg-red-50 text-red-600 px-3 py-1 rounded-md hover:bg-red-100 transition-colors"
                 >
-                    Deconnexion
+                    {m.logout_button()}
                 </button>
             </div>
         {:else}
             <a href={localizeHref('/login')} class="text-sm font-medium hover:text-blue-600">
-                Connexion
+                {m.login_button_nav()}
             </a>
         {/if}
     </div>

@@ -7,6 +7,8 @@
 	"login_button": "Se connecter",
 	"auth_error": "Email ou mot de passe incorrect.",
 	"home_title": "Bienvenue sur Giftionary",
-	"home_button":"Accueil"
+	"home_button":"Accueil",
+	"login_button_nav": "Connexion",
+	"logout_button": "Déconnexion"
 
 }

@@ -7,5 +7,7 @@
   "login_button": "Log In",
   "auth_error": "Incorrect email or password.",
   "home_title": "Welcome to Giftionary",
-  "home_button": "Home"
+  "home_button": "Home",
+  "login_button_nav": "Login",
+  "logout_button": "Logout"
 }

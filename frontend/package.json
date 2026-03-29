@@ -13,7 +13,8 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"lang:sync": "node scripts/sync-i18n.js",
-		"lang:fill": "node scripts/fill-i18n.js"
+		"lang:fill": "node scripts/fill-i18n.js",
+		"lang:compil": "npx @inlang/paraglide-js compile --project ./project.inlang"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.3",
