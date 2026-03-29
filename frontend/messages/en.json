@@ -1,10 +1,11 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!",
-	"login_title": "Login to your account",
-	"email_label": "Email address",
-	"password_label": "Password",
-	"login_button": "Log In",
-	"auth_error": "Incorrect email or password."
-
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "hello_world": "Hello, {name} from en!",
+  "login_title": "Login to your account",
+  "email_label": "Email address",
+  "password_label": "Password",
+  "login_button": "Log In",
+  "auth_error": "Incorrect email or password.",
+  "home_title": "Welcome to Giftionary",
+  "home_button": "Home"
 }
