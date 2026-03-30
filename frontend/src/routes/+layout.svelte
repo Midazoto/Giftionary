@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { localizeHref } from '$lib/paraglide/runtime';
     import { pb, currentUser } from '$lib/pocketbase';
     import { goto } from '$app/navigation';
     import LanguageSelector from '$lib/components/language_selector.svelte';
@@ -11,7 +10,7 @@
 
     function logout() {
         pb.authStore.clear();
-        goto(localizeHref('/login'));
+        goto('/login');
     }
 </script>
 
@@ -22,7 +21,7 @@
 
 <header class="flex items-center justify-between p-4 bg-white border-b shadow-sm">
     <nav class="flex gap-4">
-        <a href={localizeHref('/')} class="font-bold text-blue-600">{m.home_button()}</a>
+        <a href='/' class="font-bold text-blue-600">{m.home_button()}</a>
     </nav>
 
     <div class="flex items-center gap-6">
@@ -39,7 +38,7 @@
                 </button>
             </div>
         {:else}
-            <a href={localizeHref('/login')} class="text-sm font-medium hover:text-blue-600">
+            <a href='/login' class="text-sm font-medium hover:text-blue-600">
                 {m.login_button_nav()}
             </a>
         {/if}
